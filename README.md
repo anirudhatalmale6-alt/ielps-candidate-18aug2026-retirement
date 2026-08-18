@@ -428,3 +428,92 @@ so rollback is a unit-file change only — nothing is overwritten or deleted.
 | `api-acceptance-18aug.json` | live response class for each GET chip |
 | `backend-routes-18aug.txt` | the 266 routes the running backend registers |
 | `SOURCE-SHA256-18aug-c.txt` | the 118-file source inventory |
+
+---
+
+## 14. PiP clearance — measured after the Visual Review of 18 August
+
+Requested by §8 and §11 of the *Visual Review Instruction*: verify PiP does not
+cover primary controls at desktop, tablet and mobile.
+
+Measured, not eyeballed. PiP's launcher rectangle was compared against every
+visible link, button, input and `role=button` on eight retained surfaces at
+1280 / 900 / 390, scrolling each page through its full height because PiP is
+`position: fixed` and different content passes beneath it as a learner scrolls.
+Raw data: `pip-clearance-18aug.json`.
+
+PiP measures 167×66 at desktop and tablet (20px from each edge) and 60×60 at
+mobile (14px from each edge).
+
+### Clear on every surface, at every width
+
+Panel home, panel home with a level chosen, the adult dashboard screen, the
+parent dashboard, Studio governance, Schools roster — no control overlapped at
+any scroll position, at any of the three widths.
+
+### Two findings
+
+**1. Adult mini-app index — PiP passes over card bodies mid-scroll.**
+At rest, top or bottom of the page, PiP sits in clear space. Between those, the
+fixed launcher passes over the body of whichever card is beneath it — "Discover"
+at desktop (91×62px), "Live tutors" and "Progress" at tablet, "Discover",
+"Account" and "Progress" at mobile.
+
+This is **not a regression and not caused by any change in this candidate.** The
+same measurement against live production returns the *same overlap on the same
+card*: `Discover`, 91×62px, desktop. At mobile the candidate is measurably
+better than live — PiP is 60×60 there against live's 167×66, so the live
+overlap on `Discover` is 165×66 against the candidate's 58×60.
+
+Each card's own "Open →" affordance is never covered. The whole card is also a
+link, which is what the measurement catches.
+
+**2. Mobile, reading-activity answer buttons — the one genuine case.**
+At 390px on `/preview/lesson-interactions/`, PiP covers the right-hand end of
+two answer options ("She is buying a ticket for the next train", "She is
+complaining about a delay"). The option text stays readable because it is
+left-aligned, but the right portion of the tap target is under PiP, so a tap
+there reaches PiP instead of the answer. Captured in
+`pip-overlap-candidate-mobile-answers.png`.
+
+The same pattern will appear in the real lesson player at mobile width. It could
+not be exercised there: `/app/adult/learner/` is entitlement-gated and unlocking
+it is a real charge against live Stripe.
+
+### Not fixed, and why
+
+Every available fix touches something that is locked. Reserving bottom space
+under the answer list changes approved learner layout; shrinking, moving or
+auto-hiding the launcher is a PiP change, and §8 states no PiP redesign is
+authorised. So this is reported rather than acted on. The smallest change that
+would resolve it is roughly one line — bottom padding on the answers column at
+mobile only — and it is ready if approved.
+
+---
+
+## 15. Visual Review of 18 August — item by item
+
+| § | Item | State in `64a91d2` |
+|---|---|---|
+| 1 | Adult mini-app preserved | unchanged; its files are byte-identical to the approved `2b7966c` |
+| 2 | Standalone ladder retired | deleted; `/access/` 404 |
+| 2 | Six standalone level pages retired | deleted; `/levels/a1..c2/` 404 |
+| 3 | Inheritance work kept as evidence only | the rebuilt ladder ships nowhere; captures retained |
+| 4 | Six codes, descriptors, names, definitions preserved | `lib/cefr-levels.ts` untouched |
+| 4 | Course titles, unit and lesson counts | live from `GET /api/curriculum/deep-catalog` |
+| 4 | "Continue with {LEVEL}" | unchanged |
+| 4 | Access Panel A1–C2 selector and band | retained as the sole level-orientation surface |
+| 5 | A1/A2 "Basic user" grouping not carried forward | verified — no grouping label renders anywhere; checked across ten pages including four different chosen levels |
+| 5 | B1/B2, C1/C2 groupings where already approved | the `band` field remains in `lib/cefr-levels.ts` as shared data; nothing renders it now that the ladder is retired |
+| 6 | Selected level only, never all six | verified as a functional check |
+| 7 | Placement copy on the retired ladder | moot; the page is gone |
+| 8 | PiP preserved, clearance verified | see §14 above |
+| 9 | API chips on retained surfaces | 86 of 87 verified against the real backend; one stopped on and reported |
+| 11 | Reference audit before removal | run before deletion; results in §3 |
+| 11 | Only exclusive unreachable assets removed | 5 files plus the `away` prop, all exclusive |
+| 11 | No replacement CEFR pages created | build route list confirms none |
+| 11 | Desktop / tablet / mobile verification | 27 captures across three widths |
+| 11 | Inventory, hashes, manifest, Administrator pack | regenerated at the freeze |
+
+No code change was required by this review. `64a91d2` stands as the candidate;
+the PiP measurement is added evidence, not a new build.
