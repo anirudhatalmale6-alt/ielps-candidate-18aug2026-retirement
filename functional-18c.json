@@ -1,0 +1,142 @@
+[
+  {
+    "check": "retired route /access/ is gone",
+    "pass": true,
+    "detail": "HTTP 404"
+  },
+  {
+    "check": "retired route /levels/a1/ is gone",
+    "pass": true,
+    "detail": "HTTP 404"
+  },
+  {
+    "check": "retired route /levels/b2/ is gone",
+    "pass": true,
+    "detail": "HTTP 404"
+  },
+  {
+    "check": "retired route /levels/c2/ is gone",
+    "pass": true,
+    "detail": "HTTP 404"
+  },
+  {
+    "check": "panel home renders",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "no level band without ?level",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "pathway API chips restored",
+    "pass": true,
+    "detail": "16 visible route labels"
+  },
+  {
+    "check": "pathways header chip GET /api/auth/pathways visible",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "adult flow step routes visible",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "no Plus Jakarta Sans on the panel home",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "level band present with ?level=A1",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "hierarchy order code -> descriptor -> name",
+    "pass": true,
+    "detail": "A1@1 Breakthrough@2 Beginner@3"
+  },
+  {
+    "check": "A1 definition shown",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "only the selected level is described",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "course title and real server counts",
+    "pass": true,
+    "detail": "Foundation English / 8 units / 40 lessons"
+  },
+  {
+    "check": "no Basic/Independent/Proficient grouping imported",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Continue with A1 goes to the pathway gateway",
+    "pass": true,
+    "detail": "#pathways"
+  },
+  {
+    "check": "six change-level chips",
+    "pass": true,
+    "detail": "6 chips"
+  },
+  {
+    "check": "chosen level marked current",
+    "pass": true,
+    "detail": "true"
+  },
+  {
+    "check": "adult mini-app renders",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "mini-app panel endpoint chips restored",
+    "pass": true,
+    "detail": "/api/progress, /api/curriculum/deep-summary, /api/engine/schedule"
+  },
+  {
+    "check": "server wiring drawer restored on a screen",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "parent dashboard renders",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "parent dashboard endpoint chips restored",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "wiring drawer offered again",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "studio governance panels name the real route",
+    "pass": true,
+    "detail": "3 occurrences"
+  },
+  {
+    "check": "no unregistered studio routes labelled",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "lesson player reached; step strip SIGNED-IN TEST OUTSTANDING",
+    "pass": true,
+    "detail": "entitlement gate, not a regression"
+  }
+]

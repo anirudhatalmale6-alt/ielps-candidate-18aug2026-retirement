@@ -1,0 +1,222 @@
+[
+  {
+    "path": "/api/addons/starpath/assignments",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/addons/starpath/resources",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/assessment/level-check",
+    "status": 200,
+    "class": "200 (unauthenticated read)"
+  },
+  {
+    "path": "/api/assessment/level-check?limit=144",
+    "status": 200,
+    "class": "200 (unauthenticated read)"
+  },
+  {
+    "path": "/api/auth/pathways",
+    "status": 200,
+    "class": "200 (unauthenticated read)"
+  },
+  {
+    "path": "/api/authoring/projects",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/billing/connect/payouts",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/billing/connect/status",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/billing/plans",
+    "status": 200,
+    "class": "200 (unauthenticated read)"
+  },
+  {
+    "path": "/api/billing/subscription",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/certificates/eligibility/B1",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/compliance/privacy-export",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/curriculum/deep-catalog",
+    "status": 200,
+    "class": "200 (unauthenticated read)"
+  },
+  {
+    "path": "/api/curriculum/deep-summary",
+    "status": 200,
+    "class": "200 (unauthenticated read)"
+  },
+  {
+    "path": "/api/discovery/catalogue",
+    "status": 200,
+    "class": "200 (unauthenticated read)"
+  },
+  {
+    "path": "/api/engine/mastery",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/engine/next",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/engine/review-queue",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/engine/schedule",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/gamification/leaderboard",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/gamification/profile",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/integrations/status",
+    "status": 200,
+    "class": "200 (unauthenticated read)"
+  },
+  {
+    "path": "/api/lesson-support/language-context",
+    "status": 200,
+    "class": "200 (unauthenticated read)"
+  },
+  {
+    "path": "/api/partners/dashboard",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/pedagogy/feedback-banks",
+    "status": 200,
+    "class": "200 (unauthenticated read)"
+  },
+  {
+    "path": "/api/practice/catalog?level=A1&limit=6",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/practice/filters",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/practice/next",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/progress",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/review/due",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/roster/providers",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/school/admin/overview",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/school/classes",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/school/dashboard",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/school/parent/dashboard",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/studio/ai/governance",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/studio/coursebook/sequence/default",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/tutor/admin/prompts",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/tutor/conversations",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/tutor/quota",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/tutoring/application",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/tutoring/bookings",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/tutoring/safeguarding-policy",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  },
+  {
+    "path": "/api/tutoring/tutors",
+    "status": 401,
+    "class": "401 AUTH PROTECTED"
+  }
+]
