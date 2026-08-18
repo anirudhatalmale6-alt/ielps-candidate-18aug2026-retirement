@@ -421,7 +421,7 @@ so rollback is a unit-file change only — nothing is overwritten or deleted.
 |---|---|
 | `desktop__*.png`, `tablet__*.png`, `mobile__*.png` | eight pages at three viewports |
 | `desktop__section-band.png`, `mobile__section-band.png`, `tablet__section-band.png` | the reordered level band |
-| `desktop__section-pathways.png` | restored API chips on the pathway cards |
+| `desktop__section-pathways.jpg` | restored API chips on the pathway cards |
 | `density.json` | the no-clutter measurements |
 | `functional-18c.json` | all 28 functional checks |
 | `chip-audit-18aug.json` | all 87 chips against the backend route table |
